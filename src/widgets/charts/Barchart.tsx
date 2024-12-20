@@ -203,7 +203,7 @@ const MultiBarChart = ({
 
         const tooltipContent = parsedData
           .map((series) => {
-            const value = series.values.find((v) => v.date === d);
+            const value = series.values.find((v: any) => v.date === d);
             return `${series.key}: ${value ? value.count : 0}`;
           })
           .join('<br>');
